@@ -1,0 +1,35 @@
+<h5>*ngif</h5>
+ 
+<div *ngIf="cursos.length > 0">
+    Lista de cursos aqui.
+</div> 
+<div *ngIf="cursos.length == 0">
+    Não existem cursos para serem listados.
+</div>
+
+<div *ngIf="mostrarCursos">
+    Lista de cursos aqui.
+</div>
+<div *ngIf="!mostrarCursos">
+    Não existem cursos para serem listados.    
+</div>
+<br>
+
+<h5>hidden como alternativa</h5><!-- uma opcao que consome menos recursos hidden -->
+<div [hidden]="!mostrarCursos">
+    Lista de cursos aqui.
+</div>
+<div [hidden]="mostrarCursos">
+    Não existem cursos para serem listados.   
+</div>
+
+<button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
+
+<!--z  opcao com template, como se fosse um propetie bind -->
+<ng-template [ngIf]="mostrarCursos">
+    <div>Lista de cursos aqui.</div>
+</ng-template>
+
+<div template="ngIf mostrarCursos">
+    Lista de cursos aqui.
+</div>

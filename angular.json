@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "diretivas"
+    }
+  },
+  "defaultProject": "diretivas",
+  "cli": {
+    "analytics": "2093bbde-0dac-4463-abe4-39aa7ab5a0fb"
+  }
 }
